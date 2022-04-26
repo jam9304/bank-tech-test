@@ -6,7 +6,9 @@ const Statement = require('./statement');
 describe('Statement', () => {
   it('prints the statement header', () => {
     const statement = new Statement()
-    expect(statement.print()).toBe("Date || Credit || Debit || Balance\n")
+    console.log = jest.fn();
+    statement.print();
+    expect(console.log).toHaveBeenCalledWith("Date || Credit || Debit || Balance\n")
   });
 
   it('adds transaction to transaction array', () => {
