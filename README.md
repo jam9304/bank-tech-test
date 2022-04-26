@@ -2,6 +2,47 @@
 
 <br />
 
+## **Description**
+
+This program is designed to allow the client to:
+
+- Create a bank account
+- Deposit and withdraw money from their account
+- Print statements with all past transactions and balances
+- To hold this information in memory rather than saving it to a database
+
+The code below shows how this program works:
+
+```
+[class BankAccount]
+> myAccount = new BankAccount()
+BankAccount {
+  transaction: [class Transaction],
+  statement: Statement {
+    header: 'Date || Credit || Debit || Balance\n',
+    transactions: []
+  },
+  balance: 0
+}
+> myAccount.deposit(30)
+undefined
+> myAccount.balance
+30
+> myAccount.withdraw(15)
+undefined
+> myAccount.deposit(66)
+undefined
+> myAccount.statement.print()
+Date || Credit || Debit || Balance
+26/04/2022 || 30 ||  || 30
+26/04/2022 ||  || 15 || 15
+26/04/2022 || 66 ||  || 81
+
+undefined
+> 
+```
+
+
 ## **Instructions from Makers**
 <br />
 
@@ -40,6 +81,13 @@ date || credit || debit || balance
 - ESLint - Installed but not currently being used 
 
 <br />
+
+## **My Approach**
+
+I tried to build the banking system with 3 classes:
+- The Bank Account class itself where you can withdraw and deposit funds. The 2 below classes are also injected into this class so this is also the class you load up to use the banking program and you can also use the print function here too (which is part of the Statement class)
+- Transaction class which records every time a deposit or withdrawal is made. I did not want these to change once they had been created, i.e. you cannot change the deposit amount once the object has been constructed
+- Statement class which records all transactions and can print them out including the account's current balance
 
 ## **Project Set-up**
 
