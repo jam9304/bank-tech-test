@@ -1,6 +1,6 @@
 // const { describe } = require('eslint/lib/rule-tester/rule-tester');
 // const { it } = require('eslint/lib/rule-tester/rule-tester');
-const Transaction = require('./transaction');
+const Transaction = require('../src/transaction');
 const dateMock = require("jest-date-mock");
 
 beforeEach(() => {

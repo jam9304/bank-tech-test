@@ -1,4 +1,4 @@
-const BankAccount = require('./bankAccount');
+const BankAccount = require('../src/bankAccount');
 
 // const { describe, it } = require('eslint/lib/rule-tester/rule-tester');
 

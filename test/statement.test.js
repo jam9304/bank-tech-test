@@ -1,7 +1,7 @@
 // const { describe } = require('eslint/lib/rule-tester/rule-tester');
 // const { it } = require('eslint/lib/rule-tester/rule-tester');
 // const { it } = require('eslint/lib/rule-tester/rule-tester');
-const Statement = require('./statement');
+const Statement = require('../src/statement');
 
 describe('Statement', () => {
   it('prints the statement header', () => {

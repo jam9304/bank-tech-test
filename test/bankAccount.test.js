@@ -1,5 +1,5 @@
 // const { it } = require('eslint/lib/rule-tester/rule-tester');
-const BankAccount = require('./bankAccount');
+const BankAccount = require('../src/bankAccount');
 
 beforeEach(() => {
   myAccount = new BankAccount();

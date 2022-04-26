@@ -107,10 +107,10 @@ yourAccount.statement.print()
 ```
 Which will return:
 ```
-'Date || Credit || Debit || Balance\n' +
-  '26/04/2022 || 10 ||  || 10\n' +
-  '26/04/2022 ||  || 5 || 5\n' +
-  '26/04/2022 || 34 ||  || 39\n'
+'Date || Credit || Debit || Balance' +
+  '26/04/2022 || 10 ||  || 10' +
+  '26/04/2022 ||  || 5 || 5' +
+  '26/04/2022 || 34 ||  || 39'
 ```
 
 <br />
