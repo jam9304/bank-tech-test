@@ -73,6 +73,7 @@ The program is run within the node REPL.
 To load up, please enter the following commands into your terminal:
 
 ```
+cd src
 node
 .load bankAccount.js
 ```
