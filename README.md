@@ -131,8 +131,6 @@ This will run all units test and the feature test.
 
 <br />
 
-- Currently \n can be seen in the return of the statement, so I would remove this
-
 - Throw errors when non integers are added to deposit/withdraw
 
 - Have a minimum balance, i.e. 0 or if an account had an overdraft it could be -100 etc.
