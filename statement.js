@@ -4,12 +4,16 @@ class Statement {
     this.transactions = [];
   };
 
-  addTransactions(transaction) {
+  addTransaction(transaction) {
     this.transactions.push(transaction)
   };
 
   print() {
-    return this.header
+    let printStatement = this.header;
+    this.transactions.forEach(transaction => {
+      printStatement += `${transaction.date} || ${transaction.deposit} || ${transaction.withdraw} || ${transaction.balance}\n`;
+    });
+    return printStatement;
   };
 };
 

@@ -5,7 +5,7 @@ const dateMock = require("jest-date-mock");
 
 beforeEach(() => {
   dateMock.advanceTo(new Date(2022, 0, 1, 0, 0, 0))
-  transactionOne = new Transaction(10);
+  transactionOne = new Transaction({deposit: 10});
 });
 
 afterAll(() => {
@@ -14,17 +14,17 @@ afterAll(() => {
 
 
 describe('Transaction', () => {
-  it('stores the amount', () => {
-    expect(transactionOne.amount).toBe(10);
+  it('stores the deposit', () => {
+    expect(transactionOne.deposit).toBe(10);
   });
 
   it('stores the date', () => {
-    expect(transactionOne.date).toStrictEqual(new Date("2022-01-01T00:00:00.000Z"));
+    expect(transactionOne.date).toStrictEqual("01/01/2022");
   });
 
   it('cannot be changed after it has been constructed', () => {
-    transactionOne.amount = 100;
-    expect(transactionOne.amount).toBe(10);
+    transactionOne.deposit = 100;
+    expect(transactionOne.deposit).toBe(10);
     //Can still be changed if you overwrite the whole transaction but the individual parts after construction cannot be
   });
 });

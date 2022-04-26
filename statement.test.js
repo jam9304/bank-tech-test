@@ -11,14 +11,14 @@ describe('Statement', () => {
 
   it('adds transaction to transaction array', () => {
     const statement = new Statement()
-    statement.addTransactions({
+    statement.addTransaction({
       Date: "01/01/22",
       Withdraw: "",
       Deposit: "10",
       Balance: "10"
     })
     expect(statement.transactions).toEqual([{"Balance": "10", "Date": "01/01/22", "Deposit": "10", "Withdraw": ""}]);
-    statement.addTransactions({
+    statement.addTransaction({
       Date: "02/01/22",
       Withdraw: "",
       Deposit: "10",
