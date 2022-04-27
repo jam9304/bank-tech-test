@@ -28,7 +28,7 @@ describe('Full bank account feature', () => {
     accountOne.withdraw(6);
     accountOne.deposit(52);
     console.log = jest.fn();
-    accountOne.statement.print();
+    accountOne.printStatement();
     expect(console.log).toHaveBeenCalledWith(
       'date || credit || debit || balance\n' +
     '01/01/2022 || 10.00 ||  || 10.00\n' +
