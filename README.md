@@ -32,11 +32,11 @@ undefined
 undefined
 > myAccount.deposit(66)
 undefined
-> myAccount.statement.print()
-Date || Credit || Debit || Balance
-26/04/2022 || 30 ||  || 30
-26/04/2022 ||  || 15 || 15
-26/04/2022 || 66 ||  || 81
+> myAccount.printStatement()
+date || credit || debit || balance
+26/04/2022 || 30.00 ||  || 30.00
+26/04/2022 ||  || 15.00 || 15.00
+26/04/2022 || 66.00 ||  || 81.00
 
 undefined
 > 
@@ -152,14 +152,14 @@ Which will return:
 To print your account's statement which will include all previous transactions:
 
 ```
-yourAccount.statement.print()
+yourAccount.printStatement()
 ```
 Which will return:
 ```
-Date || Credit || Debit || Balance
-26/04/2022 || 10 ||  || 10
-26/04/2022 ||  || 5 || 5
-26/04/2022 || 34 ||  || 39
+date || credit || debit || balance
+26/04/2022 || 10.00 ||  || 10.00
+26/04/2022 ||  || 5.00 || 5.00
+26/04/2022 || 34.00 ||  || 39.00
 ```
 
 <br />
@@ -172,7 +172,7 @@ Please now type the following into your terminal:
 ```
 npm test
 ```
-This will run all units test and the feature test.
+This will run all units test and the feature test as well as providing a coverage report.
 
 <br />
 
