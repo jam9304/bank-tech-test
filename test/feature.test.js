@@ -1,9 +1,15 @@
 const BankAccount = require('../src/bankAccount');
+const dateMock = require("jest-date-mock");
 
 // const { describe, it } = require('eslint/lib/rule-tester/rule-tester');
 
 beforeEach(() => {
   accountOne = new BankAccount();
+  dateMock.advanceTo(new Date(2022, 0, 1, 0, 0, 0))
+});
+
+afterAll(() => {
+  dateMock.clear();
 });
 
 describe('Full bank account feature', () => {
@@ -25,9 +31,9 @@ describe('Full bank account feature', () => {
     accountOne.statement.print();
     expect(console.log).toHaveBeenCalledWith(
       'Date || Credit || Debit || Balance\n' +
-    '26/04/2022 || 10 ||  || 10\n' +
-    '26/04/2022 ||  || 6 || 4\n' +
-    '26/04/2022 || 52 ||  || 56\n')
+    '01/01/2022 || 10 ||  || 10\n' +
+    '01/01/2022 ||  || 6 || 4\n' +
+    '01/01/2022 || 52 ||  || 56\n')
   });
 });
 
