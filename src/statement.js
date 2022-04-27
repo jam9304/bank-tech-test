@@ -11,7 +11,7 @@ class Statement {
   print() {
     let printStatement = this.header;
     this.transactions.forEach(transaction => {
-      printStatement += `${transaction.date} || ${transaction.deposit} || ${transaction.withdraw} || ${transaction.balance}\n`;
+      printStatement += `${transaction.date} || ${transaction.deposit} || ${transaction.withdraw} || ${transaction.balance.toFixed(2)}\n`;
     });
     console.log(printStatement);
   };
