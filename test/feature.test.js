@@ -31,9 +31,9 @@ describe('Full bank account feature', () => {
     accountOne.statement.print();
     expect(console.log).toHaveBeenCalledWith(
       'date || credit || debit || balance\n' +
-    '01/01/2022 || 10 ||  || 10\n' +
-    '01/01/2022 ||  || 6 || 4\n' +
-    '01/01/2022 || 52 ||  || 56\n')
+    '01/01/2022 || 10.00 ||  || 10.00\n' +
+    '01/01/2022 ||  || 6.00 || 4.00\n' +
+    '01/01/2022 || 52.00 ||  || 56.00\n')
   });
 });
 
