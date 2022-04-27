@@ -1,6 +1,6 @@
 class Statement {
   constructor () {
-    this.header = "Date || Credit || Debit || Balance\n";
+    this.header = "date || credit || debit || balance\n";
     this.transactions = [];
   };
 

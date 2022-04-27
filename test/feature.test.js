@@ -30,7 +30,7 @@ describe('Full bank account feature', () => {
     console.log = jest.fn();
     accountOne.statement.print();
     expect(console.log).toHaveBeenCalledWith(
-      'Date || Credit || Debit || Balance\n' +
+      'date || credit || debit || balance\n' +
     '01/01/2022 || 10 ||  || 10\n' +
     '01/01/2022 ||  || 6 || 4\n' +
     '01/01/2022 || 52 ||  || 56\n')
