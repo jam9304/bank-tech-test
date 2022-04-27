@@ -11,14 +11,14 @@ class BankAccount {
   deposit(amount) {
     this.balance += amount
     this.statement.addTransaction(
-      new this.transaction({deposit: amount.toFixed(2), balance: this.balance})
+      new this.transaction({deposit: amount, balance: this.balance}, this.type = 'credit')
     );
   };
 
   withdraw(amount) {
     this.balance -= amount
     this.statement.addTransaction(
-      new this.transaction({withdraw: amount.toFixed(2), balance: this.balance})
+      new this.transaction({withdraw: amount, balance: this.balance}, this.type = 'debit')
     );
   };
 
